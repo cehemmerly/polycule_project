@@ -55,7 +55,8 @@ input {
     <h1>Chicago Polycule Project</h1>
       <p>This is a just for fun personal project to map out the connections in my corner of the poly community.</p>
       <p>If you're interested in adding your name and/or your partners to the map, please email me at <a href="mailto: polyculeproject@gmail.com">polyculeproject@gmail.com</a></p>
-<svg width="960" height="600"></svg>
+      <p>Please feel free to click and drag to see who people are connected to.</p>
+      <svg width="960" height="600"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -69,7 +70,7 @@ var radius = 30;
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.name; }))
-    .force("charge", d3.forceManyBody().strength(-75))
+    .force("charge", d3.forceManyBody().strength(-65))
     .force("center", d3.forceCenter(width / 2, height / 2 ))
     .force("collision", d3.forceCollide().radius(radius + 10));;
 
